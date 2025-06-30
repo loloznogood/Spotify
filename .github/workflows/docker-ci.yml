@@ -39,15 +39,9 @@ jobs:
 
       - name: Set up Docker Compose
         run: docker compose build app
-        env:
-          CI: true
-
-      - name: Wait for MySQL to be ready
-        run: |
-          echo "Waiting for MySQL to be healthy..."
-          while ! docker exec $(docker ps -qf "ancestor=mysql:8.0") mysqladmin ping -h "localhost" --silent; do
-            sleep 5
-          done
 
       - name: Run Laravel tests
-        run: docker compose run --rm app php artisan test
+        run: docker compose run --rm -e CI=true app php artisan test
+
+      - name: Clean up containers
+        run: docker compose down -v
