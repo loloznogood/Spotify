@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Docker Compose
-        run: docker compose build spotify
+        run: docker compose build app
 
       - name: Wait for MySQL to be ready
         run: |
@@ -48,4 +48,4 @@ jobs:
           done
 
       - name: Run Laravel tests
-        run: docker compose run --rm spotify php artisan test     
+        run: docker compose run --rm app php artisan test
