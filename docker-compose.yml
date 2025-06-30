@@ -27,7 +27,7 @@ services:
       - MYSQL_DATABASE=spotify
       - MYSQL_USER=spotify
       - MYSQL_PASSWORD=spotify
-      - CI=${CI:false}
+      - CI=${CI:-false}
     volumes:
       - db_data:/var/lib/mysql
       
