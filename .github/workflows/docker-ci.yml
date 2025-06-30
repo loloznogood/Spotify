@@ -46,7 +46,7 @@ jobs:
         run: sleep 10
 
       - name: Run Laravel tests
-        run: docker compose exec -T spotify:test php artisan test
+        run: docker compose exec -T spotify php artisan test
 
       - name: Shutdown
         run: docker compose down
