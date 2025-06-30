@@ -4,6 +4,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
+import TextInput from '@/Components/TextInput.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
 
@@ -40,6 +41,58 @@ const showingNavigationDropdown = ref(false);
                                     Dashboard
                                 </NavLink>
                             </div>
+
+                            <div
+                                class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
+                            >
+                                <NavLink
+                                    :href="route('songs')"
+                                    :active="route().current('songs')"
+                                >
+                                    Musiques
+                                </NavLink>
+                            </div>
+
+                            <div
+                                class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
+                            >
+                                <NavLink 
+                                    :href="route('playlists')"
+                                    :active="route().current('playlists')"
+                                >
+                                    Playlists
+                                </NavLink>
+                            </div>
+
+                            <div
+                                class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
+                            >
+                                <NavLink>
+                                    Albums
+                                </NavLink>
+                            </div>
+
+                            <div
+                                class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
+                            >
+                                <NavLink>
+                                    Découvrir
+                                </NavLink>
+                            </div>
+
+                        </div>
+
+                        <div class="sm:ms-6 sm:flex sm:items-center">
+                            <TextInput
+                                id="search"
+                                type="search"
+                                class="mt-1 block w-full"
+                                v-model="search"
+                                required
+                                autofocus
+                                autocomplete="search"
+                                placeholder="Rechercher un son, un album..."
+                            />
                         </div>
 
                         <div class="hidden sm:ms-6 sm:flex sm:items-center">
