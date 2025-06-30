@@ -7,6 +7,13 @@ on:
       - staging
       - preprod
       - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - dev
+      - staging
+      - preprod
+      - main
 
 jobs:
   test:
