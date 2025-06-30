@@ -14,6 +14,11 @@ Route::get('/', function () {
     ]);
 });
 
+// Health check route (DevOps)
+Route::get('/health', function() {
+    return response()->json(['status' => 'ok', 'timestamp' => now()]);
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

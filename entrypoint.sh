@@ -2,6 +2,11 @@
 
 cd /var/www
 
+# Après cd /var/www
+echo "🔐 Configuration des permissions..."
+chown -R www-data:www-data /var/www
+chmod -R 755 /var/www/storage /var/www/bootstrap/cache
+
 echo "📁 Répertoire courant : $(pwd)"
 ls -la
 
@@ -9,6 +14,20 @@ ls -la
 if [ ! -f vendor/autoload.php ]; then
     echo "🔧 Installation des dépendances..."
     composer install
+fi
+
+# Après l'installation composer
+if [ ! -d node_modules ]; then
+    echo "📦 Installation des dépendances Node.js..."
+    npm ci
+fi
+
+if [ "$APP_ENV" = "production" ] || [ "$CI" = "true" ]; then
+    echo "🎨 Build des assets..."
+    npm run build
+else
+    echo "🎨 Build des assets (dev)..."
+    npm run dev
 fi
 
 # Copier .env s'il n'existe pas
@@ -29,6 +48,14 @@ php artisan key:generate
 
 # Migrer la base (optionnel)
 php artisan migrate --force
+
+# Après les migrations
+if [ "$APP_ENV" = "production" ]; then
+    echo "⚡ Optimisations production..."
+    php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
+fi
 
 # Lancer le serveur Laravel
 echo "CI=$CI"
