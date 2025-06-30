@@ -31,5 +31,8 @@ php artisan key:generate
 php artisan migrate --force
 
 # Lancer le serveur Laravel
-echo "🚀 Lancement du serveur Laravel..."
-php artisan serve --host=0.0.0.0 --port=8000
+echo "CI=$CI"
+if [ "$CI" != "true" ]; then
+  echo "🚀 Lancement du serveur Laravel..."
+  php artisan serve --host=0.0.0.0 --port=8000
+fi
