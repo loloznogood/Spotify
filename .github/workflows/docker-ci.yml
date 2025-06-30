@@ -41,7 +41,7 @@ jobs:
         env:
           CI: true
           APP_ENV: testing
-        run: docker compose up --build -d
+        run: docker compose build app
 
       - name: Run Laravel tests
         run: docker compose exec -T app php artisan test
