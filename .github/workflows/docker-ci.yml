@@ -27,8 +27,8 @@ jobs:
           MYSQL_DATABASE: spotify
           MYSQL_USER: spotify
           MYSQL_PASSWORD: spotify
-        ports:
-          - 3306:3306
+        volumes:
+          - db_data:/var/lib/mysql
         options: >-
           --health-cmd="mysqladmin ping --silent"
           --health-interval=10s
@@ -46,7 +46,7 @@ jobs:
         run: sleep 10
 
       - name: Run Laravel tests
-        run: docker compose exec -T app php artisan test
+        run: docker compose exec -T spotify:test php artisan test
 
       - name: Shutdown
         run: docker compose down
