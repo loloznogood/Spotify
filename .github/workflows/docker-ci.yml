@@ -44,7 +44,7 @@ jobs:
         run: docker compose up --build -d
 
       - name: Run Laravel tests
-        run: docker exec -T app bash php artisan test
+        run: docker compose exec -T app php artisan test
 
       - name: Clean up containers
         run: docker compose down -v
