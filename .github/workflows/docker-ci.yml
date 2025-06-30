@@ -42,10 +42,6 @@ jobs:
           CI: true
           APP_ENV: testing
         run: docker compose up --build -d
-        
-      - name: Wait for application
-        run: |
-          timeout 60 bash -c 'until curl -f http://localhost:8000/health 2>/dev/null; do sleep 2; done'
 
       - name: Run Laravel tests
         run: docker exec -T app bash php artisan test
