@@ -41,10 +41,10 @@ jobs:
         env:
           CI: true
           APP_ENV: testing
-        run: docker compose up --build app
+        run: docker compose up --build -d app
 
       - name: Run Laravel tests
-        run: docker compose exec -T app php artisan test
+        run: docker compose run --rm -e CI=true app php artisan test
 
       - name: Clean up containers
         run: docker compose down -v
