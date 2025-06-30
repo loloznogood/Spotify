@@ -2,11 +2,6 @@
 
 cd /var/www
 
-# Après cd /var/www
-echo "🔐 Configuration des permissions..."
-chown -R www-data:www-data /var/www
-chmod -R 755 /var/www/storage /var/www/bootstrap/cache
-
 echo "📁 Répertoire courant : $(pwd)"
 ls -la
 
