@@ -9,6 +9,8 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
 
 const showingNavigationDropdown = ref(false);
+const search = ref('');
+
 </script>
 
 <template>
@@ -67,7 +69,10 @@ const showingNavigationDropdown = ref(false);
                             <div
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
-                                <NavLink>
+                                <NavLink 
+                                    :href="route('playlists')"
+                                    :active="route().current('playlists')"
+                                >
                                     Albums
                                 </NavLink>
                             </div>
@@ -75,7 +80,10 @@ const showingNavigationDropdown = ref(false);
                             <div
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
-                                <NavLink>
+                                <NavLink 
+                                    :href="route('playlists')"
+                                    :active="route().current('playlists')"
+                                >
                                     Découvrir
                                 </NavLink>
                             </div>
