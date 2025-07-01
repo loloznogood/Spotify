@@ -59,7 +59,8 @@ if [ -n "$DB_HOST" ]; then
 fi
 
 # Génération de la clé Laravel (si manquante)
-if ! grep -q "^APP_KEY=" .env; then
+APP_KEY_LINE=$(grep "^APP_KEY=" .env || true)
+if [[ -z "$APP_KEY_LINE" || "$APP_KEY_LINE" == "APP_KEY=" ]]; then
     echo "🔑 Génération de la clé de l'application..."
     php artisan key:generate
 fi
@@ -71,9 +72,9 @@ if [ "$CI" == "true" ]; then
         cp .env.example .env.testing
     fi
 
-    APP_KEY_LINE=$(grep "^APP_KEY=" .env.testing || true)
+    APP_TEST_KEY_LINE=$(grep "^APP_KEY=" .env.testing || true)
     
-    if [[ -z "$APP_KEY_LINE" || "$APP_KEY_LINE" == "APP_KEY=" ]]; then
+    if [[ -z "$APP_TEST_KEY_LINE" || "$APP_TEST_KEY_LINE" == "APP_KEY=" ]]; then
         echo "🔑 Génération de la clé pour l'environnement de test..."
         php artisan key:generate --env=testing
     fi
