@@ -65,7 +65,7 @@ if ! grep -q "^APP_KEY=" .env; then
 fi
 
 # Configuration de .env.testing (local uniquement)
-if [ "$CI" != "true" ]; then
+if [ "$CI" == "true" ]; then
     if [ ! -f .env.testing ]; then
         echo "📋 Copie de .env.example vers .env.testing..."
         cp .env.example .env.testing
