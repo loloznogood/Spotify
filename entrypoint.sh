@@ -71,7 +71,9 @@ if [ "$CI" == "true" ]; then
         cp .env.example .env.testing
     fi
 
-    if ! grep -q "^APP_KEY=" .env.testing; then
+    APP_KEY_LINE=$(grep "^APP_KEY=" .env.testing || true)
+    
+    if [[ -z "$APP_KEY_LINE" || "$APP_KEY_LINE" == "APP_KEY=" ]]; then
         echo "🔑 Génération de la clé pour l'environnement de test..."
         php artisan key:generate --env=testing
     fi
