@@ -2,16 +2,22 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ListeningHistory extends Model
 {
+    /** @use HasFactory<\Database\Factories\ListeningHistoryFactory> */
+    use HasFactory;
+    
     protected $fillable = [
         'user_id',
         'song_id',
         'listened_at'
     ];
+
+    public $timestamps = false;
 
     public function user(): BelongsTo
     {

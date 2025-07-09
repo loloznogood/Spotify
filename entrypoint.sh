@@ -36,13 +36,8 @@ if [ ! -d node_modules ]; then
 fi
 
 # Build frontend
-if [ "$APP_ENV" = "production" ] || [ "$CI" = "true" ]; then
-    echo "🎨 Build des assets (production)..."
-    npm run build
-else
-    echo "🎨 Build des assets (dev)..."
-    npm run dev
-fi
+echo "🎨 Build des assets (production)..."
+npm run build
 
 # Copie du fichier .env
 if [ ! -f .env ]; then
