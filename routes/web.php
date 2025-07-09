@@ -31,6 +31,14 @@ Route::get('/playlists', function() {
     return Inertia::render('Playlists');
 })->name('playlists');
 
+Route::get('/albums', function() {
+    return Inertia::render('Albums');
+})->name('albums');
+
+Route::get('/artists', function() {
+    return Inertia::render('Artists');
+})->name('artists');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

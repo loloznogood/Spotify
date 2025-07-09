@@ -1,7 +1,8 @@
 import { defineComponent, onMounted, onUnmounted, computed, ref, mergeProps, useSSRContext, unref, withCtx, renderSlot, createVNode, createTextVNode, createBlock, toDisplayString, openBlock } from "vue";
 import { ssrRenderAttrs, ssrRenderSlot, ssrRenderStyle, ssrRenderClass, ssrRenderComponent, ssrInterpolate } from "vue/server-renderer";
-import { A as ApplicationLogo } from "./ApplicationLogo-B2173abF.js";
+import { A as ApplicationLogo } from "./ApplicationLogo-BIIrss1K.js";
 import { Link } from "@inertiajs/vue3";
+import { _ as _sfc_main$5 } from "./TextInput-DUSq6Rtj.js";
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "Dropdown",
   __ssrInlineRender: true,
@@ -163,6 +164,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   setup(__props) {
     const showingNavigationDropdown = ref(false);
+    const search = ref("");
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(_attrs)}><div class="min-h-screen bg-gray-100 dark:bg-gray-900"><nav class="border-b border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex h-16 justify-between"><div class="flex"><div class="flex shrink-0 items-center">`);
       _push(ssrRenderComponent(unref(Link), {
@@ -195,7 +197,83 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</div></div><div class="hidden sm:ms-6 sm:flex sm:items-center"><div class="relative ms-3">`);
+      _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
+      _push(ssrRenderComponent(_sfc_main$2, {
+        href: _ctx.route("songs"),
+        active: _ctx.route().current("songs")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Musiques `);
+          } else {
+            return [
+              createTextVNode(" Musiques ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
+      _push(ssrRenderComponent(_sfc_main$2, {
+        href: _ctx.route("playlists"),
+        active: _ctx.route().current("playlists")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Playlists `);
+          } else {
+            return [
+              createTextVNode(" Playlists ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
+      _push(ssrRenderComponent(_sfc_main$2, {
+        href: _ctx.route("playlists"),
+        active: _ctx.route().current("playlists")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Albums `);
+          } else {
+            return [
+              createTextVNode(" Albums ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
+      _push(ssrRenderComponent(_sfc_main$2, {
+        href: _ctx.route("playlists"),
+        active: _ctx.route().current("playlists")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Découvrir `);
+          } else {
+            return [
+              createTextVNode(" Découvrir ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div><div class="sm:ms-6 sm:flex sm:items-center">`);
+      _push(ssrRenderComponent(_sfc_main$5, {
+        id: "search",
+        type: "search",
+        class: "mt-1 block w-full",
+        modelValue: search.value,
+        "onUpdate:modelValue": ($event) => search.value = $event,
+        required: "",
+        autofocus: "",
+        autocomplete: "search",
+        placeholder: "Rechercher un son, un album..."
+      }, null, _parent));
+      _push(`</div><div class="hidden sm:ms-6 sm:flex sm:items-center"><div class="relative ms-3">`);
       _push(ssrRenderComponent(_sfc_main$4, {
         align: "right",
         width: "48"

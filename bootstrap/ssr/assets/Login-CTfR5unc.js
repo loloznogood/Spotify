@@ -1,10 +1,11 @@
 import { defineComponent, computed, mergeProps, useSSRContext, withCtx, unref, createTextVNode, createVNode, createBlock, createCommentVNode, openBlock, toDisplayString, withModifiers } from "vue";
 import { ssrRenderAttrs, ssrLooseContain, ssrGetDynamicModelProps, ssrRenderComponent, ssrInterpolate } from "vue/server-renderer";
-import { _ as _sfc_main$2 } from "./GuestLayout-BgzqkeE7.js";
-import { _ as _sfc_main$3, a as _sfc_main$4, b as _sfc_main$5 } from "./TextInput-CHlFa_Ka.js";
+import { _ as _sfc_main$2 } from "./GuestLayout-CEJiMEGO.js";
+import { _ as _sfc_main$3, a as _sfc_main$5 } from "./InputLabel-D5C1QtOA.js";
 import { P as PrimaryButton } from "./PrimaryButton-Cygj-hvK.js";
+import { _ as _sfc_main$4 } from "./TextInput-DUSq6Rtj.js";
 import { useForm, Head, Link } from "@inertiajs/vue3";
-import "./ApplicationLogo-B2173abF.js";
+import "./ApplicationLogo-BIIrss1K.js";
 import "./_plugin-vue_export-helper-1tPrXgE0.js";
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "Checkbox",
