@@ -28,16 +28,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Inertia: partage global de l'utilisateur connecté
         Inertia::share([
-            'auth' => function () {
-                return [
-                    'user' => Auth::user(),
-                ];
-            },
-            'errors' => function () {
-                return Session::get('errors')
-                    ? Session::get('errors')->getBag('default')->getMessages()
-                    : (object) [];
-            },
+            //   
         ]);
     }
 }
