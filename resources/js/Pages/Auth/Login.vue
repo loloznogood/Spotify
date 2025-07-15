@@ -7,7 +7,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
-defineProps<{
+const props = defineProps<{
     canResetPassword?: boolean;
     status?: string;
 }>();
@@ -22,6 +22,7 @@ const submit = () => {
     form.post(route('login'), {
         onFinish: () => {
             form.reset('password');
+            console.log(form);
         },
     });
 };

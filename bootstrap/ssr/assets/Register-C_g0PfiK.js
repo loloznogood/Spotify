@@ -1,11 +1,11 @@
 import { defineComponent, withCtx, unref, createTextVNode, createVNode, withModifiers, useSSRContext } from "vue";
 import { ssrRenderComponent } from "vue/server-renderer";
-import { _ as _sfc_main$1 } from "./GuestLayout-CEJiMEGO.js";
+import { _ as _sfc_main$1 } from "./GuestLayout-Dt1vDKn8.js";
 import { _ as _sfc_main$2, a as _sfc_main$4 } from "./InputLabel-D5C1QtOA.js";
 import { P as PrimaryButton } from "./PrimaryButton-Cygj-hvK.js";
 import { _ as _sfc_main$3 } from "./TextInput-DUSq6Rtj.js";
 import { useForm, Head, Link } from "@inertiajs/vue3";
-import "./ApplicationLogo-BIIrss1K.js";
+import "./ApplicationLogo-D1XbkdeP.js";
 import "./_plugin-vue_export-helper-1tPrXgE0.js";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "Register",

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Session;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,11 +28,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Inertia: partage global de l'utilisateur connecté
         Inertia::share([
-            'auth' => function () {
-                return [
-                    'user' => Auth::user(),
-                ];
-            },
-    ]);
+            //   
+        ]);
     }
 }

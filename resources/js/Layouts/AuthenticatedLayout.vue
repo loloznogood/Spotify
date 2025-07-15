@@ -48,8 +48,8 @@ const search = ref('');
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
                                 <NavLink
-                                    :href="route('songs')"
-                                    :active="route().current('songs')"
+                                    :href="route('songs.index')"
+                                    :active="route().current('songs.index')"
                                 >
                                     Musiques
                                 </NavLink>
@@ -59,8 +59,8 @@ const search = ref('');
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
                                 <NavLink 
-                                    :href="route('playlists')"
-                                    :active="route().current('playlists')"
+                                    :href="route('playlists.index')"
+                                    :active="route().current('playlists.index')"
                                 >
                                     Playlists
                                 </NavLink>
@@ -70,8 +70,8 @@ const search = ref('');
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
                                 <NavLink 
-                                    :href="route('playlists')"
-                                    :active="route().current('playlists')"
+                                    :href="route('albums.index')"
+                                    :active="route().current('albums.index')"
                                 >
                                     Albums
                                 </NavLink>
@@ -81,10 +81,10 @@ const search = ref('');
                                 class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
                             >
                                 <NavLink 
-                                    :href="route('playlists')"
-                                    :active="route().current('playlists')"
+                                    :href="route('artists.index')"
+                                    :active="route().current('artists.index')"
                                 >
-                                    Découvrir
+                                    Artistes
                                 </NavLink>
                             </div>
 

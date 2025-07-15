@@ -1,6 +1,6 @@
 import { defineComponent, onMounted, onUnmounted, computed, ref, mergeProps, useSSRContext, unref, withCtx, renderSlot, createVNode, createTextVNode, createBlock, toDisplayString, openBlock } from "vue";
 import { ssrRenderAttrs, ssrRenderSlot, ssrRenderStyle, ssrRenderClass, ssrRenderComponent, ssrInterpolate } from "vue/server-renderer";
-import { A as ApplicationLogo } from "./ApplicationLogo-BIIrss1K.js";
+import { A as ApplicationLogo } from "./ApplicationLogo-D1XbkdeP.js";
 import { Link } from "@inertiajs/vue3";
 import { _ as _sfc_main$5 } from "./TextInput-DUSq6Rtj.js";
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
