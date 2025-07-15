@@ -1,6 +1,6 @@
 import { defineComponent, mergeProps, unref, withCtx, createVNode, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot } from "vue/server-renderer";
-import { A as ApplicationLogo } from "./ApplicationLogo-BIIrss1K.js";
+import { A as ApplicationLogo } from "./ApplicationLogo-D1XbkdeP.js";
 import { Link } from "@inertiajs/vue3";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "GuestLayout",
