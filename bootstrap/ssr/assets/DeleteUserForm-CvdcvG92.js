@@ -1,7 +1,7 @@
 import { mergeProps, useSSRContext, defineComponent, ref, watch, onMounted, onUnmounted, computed, withCtx, createTextVNode, unref, createVNode, withKeys, nextTick } from "vue";
 import { ssrRenderAttrs, ssrRenderSlot, ssrRenderStyle, ssrRenderClass, ssrRenderComponent } from "vue/server-renderer";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.js";
-import { _ as _sfc_main$4, a as _sfc_main$6 } from "./InputLabel-D5C1QtOA.js";
+import { _ as _sfc_main$4, a as _sfc_main$6 } from "./InputLabel-4Qe7H57J.js";
 import { _ as _sfc_main$5 } from "./TextInput-DUSq6Rtj.js";
 import { useForm } from "@inertiajs/vue3";
 const _sfc_main$3 = {};

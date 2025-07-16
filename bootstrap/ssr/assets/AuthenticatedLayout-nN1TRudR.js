@@ -199,8 +199,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, _parent));
       _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
       _push(ssrRenderComponent(_sfc_main$2, {
-        href: _ctx.route("songs"),
-        active: _ctx.route().current("songs")
+        href: _ctx.route("songs.index"),
+        active: _ctx.route().current("songs.index")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -215,8 +215,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, _parent));
       _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
       _push(ssrRenderComponent(_sfc_main$2, {
-        href: _ctx.route("playlists"),
-        active: _ctx.route().current("playlists")
+        href: _ctx.route("playlists.index"),
+        active: _ctx.route().current("playlists.index")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -231,8 +231,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, _parent));
       _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
       _push(ssrRenderComponent(_sfc_main$2, {
-        href: _ctx.route("playlists"),
-        active: _ctx.route().current("playlists")
+        href: _ctx.route("albums.index"),
+        active: _ctx.route().current("albums.index")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -247,15 +247,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, _parent));
       _push(`</div><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">`);
       _push(ssrRenderComponent(_sfc_main$2, {
-        href: _ctx.route("playlists"),
-        active: _ctx.route().current("playlists")
+        href: _ctx.route("artists.index"),
+        active: _ctx.route().current("artists.index")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Découvrir `);
+            _push2(` Artistes `);
           } else {
             return [
-              createTextVNode(" Découvrir ")
+              createTextVNode(" Artistes ")
             ];
           }
         }),

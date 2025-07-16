@@ -1,7 +1,7 @@
 import { defineComponent, withCtx, unref, createTextVNode, createVNode, withModifiers, useSSRContext } from "vue";
 import { ssrRenderComponent } from "vue/server-renderer";
 import { _ as _sfc_main$1 } from "./GuestLayout-Dt1vDKn8.js";
-import { _ as _sfc_main$2, a as _sfc_main$4 } from "./InputLabel-D5C1QtOA.js";
+import { _ as _sfc_main$2, a as _sfc_main$4 } from "./InputLabel-4Qe7H57J.js";
 import { P as PrimaryButton } from "./PrimaryButton-Cygj-hvK.js";
 import { _ as _sfc_main$3 } from "./TextInput-DUSq6Rtj.js";
 import { useForm, Head } from "@inertiajs/vue3";

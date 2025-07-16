@@ -1,7 +1,7 @@
 import { defineComponent, computed, mergeProps, useSSRContext, withCtx, unref, createTextVNode, createVNode, createBlock, createCommentVNode, openBlock, toDisplayString, withModifiers } from "vue";
 import { ssrRenderAttrs, ssrLooseContain, ssrGetDynamicModelProps, ssrRenderComponent, ssrInterpolate } from "vue/server-renderer";
 import { _ as _sfc_main$2 } from "./GuestLayout-Dt1vDKn8.js";
-import { _ as _sfc_main$3, a as _sfc_main$5 } from "./InputLabel-D5C1QtOA.js";
+import { _ as _sfc_main$3, a as _sfc_main$5 } from "./InputLabel-4Qe7H57J.js";
 import { P as PrimaryButton } from "./PrimaryButton-Cygj-hvK.js";
 import { _ as _sfc_main$4 } from "./TextInput-DUSq6Rtj.js";
 import { useForm, Head, Link } from "@inertiajs/vue3";
@@ -89,7 +89,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               autofocus: "",
               autocomplete: "username"
             }, null, _parent2, _scopeId));
-            _push2(`<pre${_scopeId}>${ssrInterpolate(unref(form))}</pre>`);
             _push2(ssrRenderComponent(_sfc_main$5, {
               class: "mt-2",
               message: unref(form).errors.email
@@ -179,7 +178,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     autofocus: "",
                     autocomplete: "username"
                   }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                  createVNode("pre", null, toDisplayString(unref(form)), 1),
                   createVNode(_sfc_main$5, {
                     class: "mt-2",
                     message: unref(form).errors.email

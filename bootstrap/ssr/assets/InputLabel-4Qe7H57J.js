@@ -8,9 +8,10 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
+      var _a;
       _push(`<div${ssrRenderAttrs(mergeProps({
         style: _ctx.message ? null : { display: "none" }
-      }, _attrs))}><p class="text-sm text-red-600 dark:text-red-400">${ssrInterpolate(_ctx.message)}</p></div>`);
+      }, _attrs))}><p class="text-sm text-red-600 dark:text-red-400">${ssrInterpolate((_a = _ctx.message) == null ? void 0 : _a[0])}</p></div>`);
     };
   }
 });

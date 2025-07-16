@@ -1,6 +1,6 @@
 import { defineComponent, unref, withCtx, createTextVNode, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderStyle } from "vue/server-renderer";
-import { _ as _sfc_main$1, a as _sfc_main$3 } from "./InputLabel-D5C1QtOA.js";
+import { _ as _sfc_main$1, a as _sfc_main$3 } from "./InputLabel-4Qe7H57J.js";
 import { P as PrimaryButton } from "./PrimaryButton-Cygj-hvK.js";
 import { _ as _sfc_main$2 } from "./TextInput-DUSq6Rtj.js";
 import { usePage, useForm, Link } from "@inertiajs/vue3";
